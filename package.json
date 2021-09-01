@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "2.3.10"
+    "@openapitools/openapi-generator-cli": "2.4.1"
   }
 }
