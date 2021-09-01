@@ -1,0 +1,15 @@
+{
+  "name": "gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api:generate-models": "openapi-generator-cli generate -g typescript-fetch --skip-validate-spec -i api-specs.json --additional-properties=supportsES6=true,typescriptThreePlus=true,withInterfaces=true"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "2.3.10"
+  }
+}

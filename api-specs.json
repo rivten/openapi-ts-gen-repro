@@ -1,0 +1,72 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "test",
+    "description": "test",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/",
+      "description": ""
+    }
+  ],
+  "paths": {
+    "/endpoint/": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mother"
+                }
+              }
+            }
+          }
+        },
+        "parameters": []
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "Mother": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "attributes": {
+            "nullable": "true",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/A"
+              },
+              {
+                "$ref": "#/components/schemas/B"
+              }
+            ]
+          }
+        }
+      },
+      "A": {
+          "properties": {
+              "pa": {
+                  "type": "string"
+              }
+          }
+      },
+      "B": {
+          "properties": {
+              "ba": {
+                  "type": "boolean"
+              },
+              "bb": {
+                  "type": "integer"
+              }
+          }
+      }
+    }
+  }
+}
